@@ -8,11 +8,10 @@ class UserController {
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
                 'password' => password_hash($_POST['password'],PASSWORD_DEFAULT),
-                'perfil' => $_POST['per=il']
+                'perfil' => $_POST['perfil']
             ];
 
-            User::create($dataUser);
-
+            UserModel::create($dataUser);
             header('Location: index.php');
         } else {
             include 'view/RegisterView.php';
