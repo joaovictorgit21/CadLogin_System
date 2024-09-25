@@ -11,7 +11,7 @@
     <main>
         <div>
             <h2>Cadastro de Usuário</h2>
-            <form method="POST" action="">
+            <form method="POST" action="index.php?action=RegisterView">
                     <label for="name">Name</label>
                     <input type="text" name="name" placeholder="Name">
 
@@ -30,7 +30,7 @@
 
                 <button type="submit">Cadastrar</button>
             </form>
-            <a href="">Voltar ao login</a>
+            <a href="index.php?action=LoginView">Voltar ao login</a>
         </div>
     </main>
     

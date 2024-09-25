@@ -9,16 +9,18 @@
 <body>
 
     <main>
-        <form action="">
+        <form action="index.php?action=LoginView" method="POST">
             <section>
                 <label for="email">Email:</label>
                 <input type="email" name="email" placeholder="email">
 
-                <label for="password">Password</label>
+                <label for="password">Password:</label>
                 <input type="password" name="password" placeholder="password">
             </section>
             <button class="btnLogin" name="btnLogin" type="submit">Login</button>
         </form>
+
+        <a href="index.php?action=RegisterView">Cadastrar-se</a>
     </main>
     
 </body>
