@@ -1,3 +1,3 @@
 <?php
-    require 'router.php'
+    require 'Routes.php'
 ?>
