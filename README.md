@@ -169,7 +169,7 @@ C:.
 |-------------|-----------|
 | 🖥 Back-End   |    PHP    |
 | 👁‍🗨 Front-End  | HTML e CSS|
-| 🎲 Database   |   MySQl   |
+| 🎲 Database   |   MySQL   |
 
 <p>
   <a href="https://skillicons.dev">
