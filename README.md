@@ -221,7 +221,7 @@ git clone https://github.com/joaovicorgit21/CadLogin_System
 
 # 👨‍💻 Programador Criador
 
-| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/111014716?s=400&u=5d8ff835762bc44c2651472ac96f0f9fc1f953a6&v=4" width=95><br><sub>Leonardo Rocha Sidon</sub>](https://github.com/leonardossrocha)
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/10586424?v=4><br><sub>Leonardo Rocha Sidon</sub>](https://github.com/leonardossrocha)
 
 | :--: |
 
