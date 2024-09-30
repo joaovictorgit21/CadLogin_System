@@ -194,7 +194,7 @@ C:.
 ### 🛠 Pré-Requisito:
 
 <ul>
-  <li><strong>Servidor Apache:</strong>  Apache. </li>
+  <li><strong>Servidor:</strong>  Apache. </li>
   <li><strong>PHP 7.4+:</strong> O sistema requer PHP e as extensões PDO. </li>
   <li><strong>MySQL:</strong> Banco de dados utilizado para armazenar os dados de usuários. </li>
 </ul>
