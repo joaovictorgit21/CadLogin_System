@@ -1,0 +1,18 @@
+.container {
+    height: 35rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: 7%;
+}
+
+.btnRegister {
+    width: 270px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+}
+
+.profile {
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
