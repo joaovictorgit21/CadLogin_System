@@ -229,7 +229,7 @@ git clone https://github.com/joaovicorgit21/CadLogin_System
 
 ## Funcionamento:
 
-<img width="100%" src="./components/src/videoReadme.gif">
+<img width="100%" src="./components/src/video/videoReadme.gif">
 
 ## 📈 Linguagem mais utilizada:
 
