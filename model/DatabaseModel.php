@@ -1,4 +1,5 @@
-<?
+<?php
+
     class DatabaseModel {
         private static $instance = null;
 
@@ -20,7 +21,6 @@
                 // Define um modo de erro para exeções, facilitando a depuração e tratamento de erros
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             }
-
             return self::$instance;
         }
     }

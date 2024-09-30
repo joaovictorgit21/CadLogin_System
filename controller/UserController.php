@@ -1,4 +1,5 @@
 <?php
+
 class UserController {
     public function registerUser() {
         // verifica se a requisição é do tipo POST (se o form foi enviado)

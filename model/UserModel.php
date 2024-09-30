@@ -1,6 +1,6 @@
 <?php
 
-require_once "model/DatabaseModel.php";
+require_once 'model/DatabaseModel.php';
 
     class UserModel {
        
@@ -22,10 +22,10 @@ require_once "model/DatabaseModel.php";
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
 
-        public static function create($data) {
+        public static function create($dataUser) {
             $conn = DatabaseModel::getConnection();
-            $stmt = $conn->prepare("INSERT INTO usuarios(name, email, senha, perfil) VALUES (:name, :email, :password, :perfil)");
-            $stmt->execute($data);
+            $stmt = $conn->prepare("INSERT INTO usuarios(name, email, password, profile) VALUES (:name, :email, :password, :profile)");
+            $stmt->execute($dataUser);
         }
     }
 ?>
