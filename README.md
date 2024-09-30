@@ -189,6 +189,20 @@ C:.
   </a>
 </p>
 
+## Métodos Utilizados:
+| **Método**                | **Descrição**                                                                                     | **Uso no Sistema**                                                     |
+|---------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
+| `password_hash()`         | Gera um hash seguro da senha usando um algoritmo de hashing.                                    | Usado em `UserController::registerUser()` para armazenar a senha.   |
+| `password_verify()`       | Verifica se a senha fornecida corresponde ao hash armazenado.                                  | Usado em `AuthController::loginUser()` para autenticar o usuário.   |
+| `PDO`                     | Classe do PHP para acessar bancos de dados de forma segura e eficiente, com suporte a várias bases de dados. | Usado para criar a conexão com o banco de dados em `DatabaseModel`.  |
+| `PDO::prepare()`          | Prepara uma instrução SQL para execução, ajudando a prevenir injeções SQL.                       | Usado em `UserModel` para preparar consultas SQL (como `findByEmail` e `create`). |
+| `PDO::execute()`          | Executa uma instrução SQL previamente preparada.                                                  | Usado em `UserModel` para inserir ou buscar dados no banco.         |
+| `PDO::fetch()`            | Recupera a próxima linha de um conjunto de resultados associado a uma consulta.                   | Usado em `UserModel::findByEmail()` e `UserModel::find()` para obter dados do usuário. |
+| `session_start()`         | Inicia uma nova sessão ou retoma a sessão existente.                                             | Usado em `AuthController::loginUser()` para gerenciar a sessão do usuário. |
+| `header()`                | Envia um cabeçalho HTTP para o cliente, geralmente para redirecionamento.                        | Usado para redirecionar o usuário após login ou registro.           |
+| `include`                 | Inclui e avalia o arquivo especificado.                                                         | Usado em `AuthController` e `UserController` para incluir as views de login e registro. |
+
+
 ## 📦 Instalação:
 
 ### 🛠 Pré-Requisito:
@@ -228,4 +242,3 @@ git clone https://github.com/joaovicorgit21/CadLogin_System
 
 | [<img loading="lazy" src="https://avatars.githubusercontent.com/u/111014716?s=400&u=5d8ff835762bc44c2651472ac96f0f9fc1f953a6&v=4" width=95><br><sub>João Victor Farias</sub>](https://github.com/joaovictorgit21)
 | :---: |
->>>>>>> refs/remotes/origin/main
