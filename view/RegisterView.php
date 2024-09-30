@@ -21,8 +21,8 @@
                     <label for="password">Password</label>
                     <input type="password" name="password" placeholder="Password">
                     
-                    <label for="perfil">Perfil</label>
-                    <select name="perfil" id="perfil">
+                    <label for="profile">Perfil</label>
+                    <select name="profile" id="profile">
                         <option value="admin"> Admin</option>
                         <option value="gestor">Gestor</option>
                         <option value="colaborador">Colaborador</option>

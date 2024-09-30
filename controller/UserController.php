@@ -8,7 +8,7 @@ class UserController {
                 'name' => $_POST['name'],
                 'email' => $_POST['email'],
                 'password' => password_hash($_POST['password'],PASSWORD_DEFAULT),
-                'perfil' => $_POST['perfil']
+                'profile' => $_POST['profile']
             ];
 
             UserModel::create($dataUser);
