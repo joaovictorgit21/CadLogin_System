@@ -227,6 +227,10 @@ git clone https://github.com/joaovicorgit21/CadLogin_System
   Edite o arquivo DatabaseModel.php e insira suas credenciais de acesso ao MySQL.
 </p>
 
+## Funcionamento:
+
+<img src="./components/src/videoReadme.gif">
+
 ## 📈 Linguagem mais utilizada:
 
 <img width=10% src="https://img.shields.io/github/languages/top/vitorgabrieldevk/Account_Management_System"/>
