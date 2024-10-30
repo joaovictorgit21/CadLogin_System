@@ -7,9 +7,9 @@ USE `sistema_usuario`;
 -- Criação da Tabela | Table Criation  --
 CREATE TABLE `usuarios` (
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    senha VARCHAR(255) NOT NULL,
-    perfil ENUM('admin', 'gestor', 'colaborador') NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    profile ENUM('admin', 'gestor', 'colaborador') NOT NULL,
     creat_at TIMESTAMP DEFAULT current_timestamp
 );

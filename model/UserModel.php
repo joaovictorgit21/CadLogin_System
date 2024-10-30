@@ -24,7 +24,22 @@ require_once 'model/DatabaseModel.php';
 
         public static function create($dataUser) {
             $conn = DatabaseModel::getConnection();
-            $stmt = $conn->prepare("INSERT INTO usuarios(name, email, password, profile) VALUES (:name, :email, :password, :profile)");
+            $stmt = $conn->prepare("INSERT INTO usuarios(nome, email, senha, perfil) VALUES (:nome, :email, :senha, :perfil)");
+            $stmt->execute($dataUser);
+        }
+        
+        public static function all() {
+            $conn = DatabaseModel::getConnection();
+            $stmt = $conn->query("SELECT * FROM usuarios");
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+        
+        public static function update($id, $dataUser) {
+            $conn = DatabaseModel::getConnection();
+            
+            $stmt = $conn->prepare("UPDATE usuarios SET nome = :nome, email = :email, perfil = :perfil) WHERE id = :id");
+            $dataUser['id'] = $id;
+
             $stmt->execute($dataUser);
         }
     }

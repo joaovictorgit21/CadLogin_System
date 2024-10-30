@@ -6,16 +6,44 @@ class UserController {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // pega os dados do formulário e organiza em um Array
             $dataUser = [
-                'name' => $_POST['name'],
+                'nome' => $_POST['nome'],
                 'email' => $_POST['email'],
-                'password' => password_hash($_POST['password'],PASSWORD_DEFAULT),
-                'profile' => $_POST['profile']
+                'senha' => password_hash($_POST['senha'], PASSWORD_DEFAULT),
+                'perfil' => $_POST['perfil']
             ];
 
             UserModel::create($dataUser);
-            header('Location: index.php');
+            header('Location: index.php');  
         } else {
             include 'view/RegisterView.php';
+        }
+    }
+
+    public function listUsers() {
+        $users = UserModel::all();
+        include 'view/ListUserView.php';
+    }
+
+    public function editUser($id) {
+        session_start();
+
+        if ($_SESSION['perfil' == 'admin'] || $_SESSION['perfil' == 'gestor']) {
+            $user = UserModel::find($id);
+
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $dataUser = [
+                    'nome' => $_POST['nome'],
+                    'email' => $_POST['email'],
+                    'perfil' => $_POST['perfil']
+                ];
+                
+                UserModel::update($id, $dataUser);
+                header('Location: index.php?action=list');
+            } else {
+                include 'view/EditUserView.php';
+            }
+        } else {
+            echo 'Você não tem permissão para editar usuários!';
         }
     }
 }

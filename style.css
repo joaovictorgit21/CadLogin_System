@@ -5,10 +5,7 @@
 }
 
 body {
-    background-image: url(./components/imgs/background.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    background-color: #969696;
 }
 
 .container {
@@ -20,7 +17,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #0000004d;
     border-radius: 20px;
 }
 

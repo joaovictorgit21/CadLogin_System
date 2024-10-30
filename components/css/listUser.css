@@ -1,0 +1,91 @@
+body {
+    background-color: #b3b2b2;
+}
+
+/* Estilizando a tabela */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #969696; /* Cor de fundo para o cabeçalho */
+    color: white; /* Cor do texto no cabeçalho */
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table th, .styled-table td {
+    padding: 10px 10px;
+    border: 1px solid #0000004d; /* Borda para as células */
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #0000004d; /* Borda inferior */
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #615f5f; /* Cor de fundo alternada */
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #969696; /* Borda inferior da última linha */
+}
+
+/* Estilizando os botões */
+.btn {
+    background-color: red; /* Cor de fundo vermelha */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: darkred; /* Muda para um tom mais escuro ao passar o mouse */
+}
+
+.btn-delete {
+    background-color: red; /* Cor de fundo vermelha para o botão de excluir */
+}
+
+.btn-delete:hover {
+    background-color: darkred;
+}
+
+/* Container para centralizar e ajustar o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Classe para o botão de Voltar ao Dashboard */
+.btn-dashboard {
+    background-color: red;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-dashboard:hover {
+    background-color: darkred;
+}
+
+.td {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-display: auto;
+}

@@ -1,0 +1,67 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #969696;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilos principais */
+.container {
+    background-color: #0000004d;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    background-color: #595858;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #FFFFFF;
+    color: #595858;
+}
+
+.btnLogout {
+    margin-top: 20px;
+    background-color: #595858;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.btnLogout:hover {
+    background-color: #FFFFFF;
+    color: #595858;
+}

@@ -1,3 +1,16 @@
+body {
+    /* background-image: url(../src/imgs/background.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat; */
+    overflow: hidden;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 20%;
+}
+
 .btnLogin {
     width: 270px;
     height: 35px;
