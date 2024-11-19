@@ -1,4 +1,4 @@
-# 🎉 System of Register and Login User with PHP
+# Sistema de Registro e Login de Usuário com PHP e MySQL
 
 ## 🌟 Visão Geral:
 
@@ -57,6 +57,32 @@
   <li>🆔 <strong>ID do Usuário</strong></li>
   <li>👤 <strong>Perfil</strong> do usuário para controle de permissões</li>
 </ul>
+
+## Funcionalidades Gerais:
+
+1️⃣ <strong>Login:</strong> <br>
+  * Autenticação do usuário com e-mail e senha.
+  * Verificação do perfil para personalizar a experiência.
+  <br><br>
+
+2️⃣ <strong> Logout </strong> <br>
+  * Encerra a sessão do usuário, removendo as informações armazenadas.
+  <br><br>
+
+3️⃣ <strong> Registro de Usuário </strong> <br>
+  * Permite criar contas com nome, e-mail, senha e perfil definido.
+  <br><br>
+
+4️⃣ <strong> Painel de Controle </strong> <br>
+  * Exibição de mensagens e funcionalidades de acordo com o perfil logado.
+  <br><br>
+  
+5️⃣ <strong> Gerenciamento de Usuários: </strong> <br>
+  *  Listar Usuários - Visualizar uma tabela com os detalhes de todos os usuários cadastrados.<br>
+  *  Editar Usuários - Modificar informações como nome, e-mail e perfil.<br>
+  *  Excluir Usuários - Remover contas do sistema (somente para Admin).
+
+  <br>
 
 ### 📂 Perfis de Acesso:
 
@@ -236,6 +262,10 @@ git clone https://github.com/joaovicorgit21/CadLogin_System
 <img width=10% src="https://img.shields.io/github/languages/top/vitorgabrieldevk/Account_Management_System"/>
 
 ## Autores:
+
+# 🎉 System of Register and Login User with PHP and MySQL
+
+## Em Breve Uma Versão em Inglês
 
 # 👨‍💻 Programador Criador
 
