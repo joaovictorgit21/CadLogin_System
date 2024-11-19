@@ -25,8 +25,18 @@
         case 'list':
             $UserController->listUsers();
         case 'edit':
-            $id = $_GET['id'];
+            $id = null;
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+            }
             $UserController->editUser($id);
+            break;
+        case 'delete':
+            $id = null;
+            if (isset($_GET['id'])) {
+                $id = $_GET['id'];
+            }
+            $UserController->delete($id);
             break;
         default:
             $AuthController->loginUser();
