@@ -21,7 +21,7 @@ require_once 'model/DatabaseModel.php';
             
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
-
+        
         public static function create($dataUser) {
             $conn = DatabaseModel::getConnection();
             $stmt = $conn->prepare("INSERT INTO usuarios(nome, email, senha, perfil) VALUES (:nome, :email, :senha, :perfil)");
@@ -37,10 +37,17 @@ require_once 'model/DatabaseModel.php';
         public static function update($id, $dataUser) {
             $conn = DatabaseModel::getConnection();
             
-            $stmt = $conn->prepare("UPDATE usuarios SET nome = :nome, email = :email, perfil = :perfil) WHERE id = :id");
+            $stmt = $conn->prepare("UPDATE usuarios SET nome = :nome, email = :email, perfil = :perfil WHERE id = :id");
             $dataUser['id'] = $id;
 
             $stmt->execute($dataUser);
         }
+        
+        public static function delete($id) {
+            $conn = DatabaseModel::getConnection();
+            
+            $stmt = $conn->prepare('DELETE FROM usuarios WHERE id = :id');
+            $stmt->execute(['id'=> $id]);
+        } 
     }
 ?>
