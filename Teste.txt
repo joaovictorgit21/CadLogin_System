@@ -1,0 +1,56 @@
+
+
+<?php
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $user = UserModel::find($id);
+    } else {
+        $user = [
+            'id' => '',
+            'nome' => '',
+            'email' => '',
+            'perfil' => ''
+        ];
+    }
+?>
+
+Explicação Linha por Linha
+
+1 .if (isset($_GET['id'])) {
+    A função isset() verifica se a variável $_GET['id'] está definida. Isso confirma que o parâmetro id foi passado na URL.
+
+    * Exemplo: 
+        se a URL for index.php?id=1, $_GET['id'] terá o valor 1, e o código dentro do if será executado.
+
+
+2. $id = $_GET['id'];
+    Aqui, o valor do id recebido na URL é armazenado na variável $id. Esse valor será usado para buscar o usuário correspondente no banco de dados.
+
+3. $user = UserModel::find($id);
+    Essa linha chama um método estático find da classe UserModel para buscar os dados do usuário no banco de dados com base no $id.
+
+        * UserModel representa o modelo que gerencia as operações de banco de dados para a entidade "usuário".
+        * find($id) é um método que provavelmente executa uma consulta ao banco para retornar os dados do usuário com o id especificado. Esse método é esperado para retornar um array associativo ou um objeto contendo os dados do usuário (ex.: ['id' => 1, 'nome' => 'João', 'email' => 'joao@email.com', 'perfil' => 'admin']).
+
+4. } else {
+    Essa parte do código é executada se $_GET['id'] não estiver definido, ou seja, se o id não for passado na URL. Nesse caso, significa que não há um usuário específico para carregar.
+
+5. $user = [
+    Se não houver id na URL, a variável $user é definida como um array associativo vazio, com chaves (id, nome, email, perfil) que simulam os dados de um usuário. Esses valores em branco serão úteis para inicializar um formulário, permitindo que a página funcione sem erros mesmo sem um usuário específico.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+$id = null;
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+}
+
+1. $id = null;
+    Esta linha inicializa a variável $id com o valor null. Isso garante que $id tenha um valor padrão mesmo se o parâmetro id não for passado na URL. Esse valor null pode ser usado depois para verificar se o id está realmente disponível e evitar erros em operações que dependem dele.
+
+2. if (isset($_GET['id'])) {
+    A função isset() verifica se $_GET['id'] foi definido. Em outras palavras, verifica se o parâmetro id está presente na URL (por exemplo, index.php?id=10).
+
+3. $id = $_GET['id'];
+    Caso o id esteja presente na URL, o valor de $_GET['id'] é atribuído à variável $id. Assim, $id passa a conter o valor do id que foi passado, que pode ser usado posteriormente no código para operações como buscar um registro específico no banco de dados.
