@@ -25,10 +25,13 @@ class UserController {
     }
 
     public function editUser($id) {
-        session_start();
+        
+        if (!isset($_SESSION)) {
+            session_start();
+        }
 
-        if ($_SESSION['perfil' == 'admin'] || $_SESSION['perfil' == 'gestor']) {
-            $user = UserModel::find($id);
+        if ($_SESSION['perfil'] == 'admin' || $_SESSION['perfil'] == 'gestor') {
+            $dataUser = UserModel::find($id);
 
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $dataUser = [
@@ -40,12 +43,16 @@ class UserController {
                 UserModel::update($id, $dataUser);
                 header('Location: index.php?action=list');
             } else {
-                include 'view/EditUserView.php';
+                include 'view/EditUserView.php';                                                                                                                                                                                                                                                                                                                                                                                                    
             }
         } else {
             echo 'Você não tem permissão para editar usuários!';
         }
     }
-}
 
+    public function delete($id) {
+        UserModel::delete($id);
+        header('Location: index.php?action=list');
+    }
+}
 ?>
